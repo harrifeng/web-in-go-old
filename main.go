@@ -37,6 +37,9 @@ func PostNoteHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("%c", p[i])
 	}
 
+	len, _ = r.Body.Read(p)
+	fmt.Println(len)
+
 	// err := json.NewDecoder(r.Body).Decode(&note)
 	// if err != nil {
 	// 	panic(err)
