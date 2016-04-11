@@ -25,13 +25,6 @@ var id int = 0
 func PostNoteHandler(w http.ResponseWriter, r *http.Request) {
 	var note Note
 
-	// --------------------------Understanding the reference type--
-	p := make([]byte, 1000)
-	r.Body.Read(p)
-	fmt.Println(r)
-	pp := p
-	fmt.Println("p is", pp)
-	// ----------------------------
 	err := json.NewDecoder(r.Body).Decode(&note)
 	if err != nil {
 		panic(err)
