@@ -25,3 +25,6 @@ _testmain.go
 
 #IDE Stuff
 .idea
+
+#log file
+*.log
